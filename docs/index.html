@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+  <meta content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="./css/Labeling.css"></link>
+  <script type="text/javascript" src="./src/Labeling.js" charset="UTF-8" defer></script>
+</head>
+
+<body>
+  <div>
+    <label>大きさ</label><input id="size" type="text" value="30"><button type="button" name="button" onclick="onStart()">start!</button>
+  </div>
+  <div id="result">
+
+  </div>
+</body>
+
+</html>
+<script type="text/javascript">
+function onStart() {
+  let size = document.getElementById("size").value;
+  if (isNaN(Number(size))) {
+    document.getElementById("result").innerHTML = "数値を入力"
+  }
+  step(LabelInit(testdata(Number(size))));
+}
+
+</script>
